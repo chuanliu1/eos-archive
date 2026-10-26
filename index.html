@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>《末世：我有一座军火库》核心设定集</title>
+<style>
+*{box-sizing:border-box}
+:root{--bg:#0e0f11;--panel:#191b1f;--panel2:#1f2226;--line:#2a2d33;--text:#c6c9cf;--dim:#868b94;--white:#f2f4f7;--red:#e63946;--amber:#fca311}:root{--bg:#0e0f11;--panel:#191b1f;--panel2:#1f2226;--line:#2a2d33;--text:#c6c9cf;--dim:#868b94;--white:#f2f4f7;--red:#e63946;--琥珀:#fca311}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--text);font:15px/1.78 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;background:radial-gradient(900px 500px at 85% -10%,rgba(230,57,70,.09),transparent 60%),radial-gradient(700px 400px at 0% 100%,rgba(252,163,17,.05),transparent 60%),var(--bg);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+::selection{background:rgba(230,57,70,.35);color:#fff}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-thumb{background:#2b2f35;border-radius:6px;border:2px solid var(--bg)}
+::-webkit-scrollbar-track{background:transparent}
+
+.layout{display:flex;min-height:100vh}
+.sidebar{width:262px;flex:0 0 262px;position:sticky;top:0;height:100vh;overflow-y:auto;z-index:80;background:linear-gradient(180deg,#101215,#0c0d0f);border-right:1px solid var(--line);padding:24px 0 40px}
+.content{flex:1;min-width:0;max-width:880px;margin:0 auto;padding:40px 40px 120px}
+
+.brand{display:block;padding:0 22px 18px;border-bottom:1px solid var(--line);margin-bottom:16px}
+.brand b{display:block;color:var(--white);font-size:15px;letter-spacing:.5px}
+.brand span{display:block;font-size:11px;color:#5c6068;letter-spacing:2px;margin-top:6px}
+.searchwrap{padding:0 16px 14px}
+#q{width:100%;background:#0a0b0d;border:1px solid var(--line);border-radius:6px;color:var(--text);padding:9px 11px;font-size:13px;font-family:inherit;outline:none}
+#q:focus{border-color:var(--red);box-shadow:0 0 0 2px rgba(230,57,70,.15)}
+#q::placeholder{color:#5c6068}
+#results{border-top:1px solid var(--line);max-height:44vh;overflow-y:auto;padding:6px 0}
+#results a{display:flex;gap:9px;padding:7px 22px;font-size:12.5px;color:#a7adb6}
+#results a:hover{background:#17191d;color:#fff}
+#results a i{font-style:normal;color:var(--red);font-weight:800;font-size:11px;padding-top:1px}
+.nores{padding:10px 22px;font-size:12px;color:#5c6068}
+.nav a{display:flex;gap:10px;padding:9px 22px;color:#9aa0a9;font-size:13.5px;border-left:3px solid transparent;transition:.18s}
+.nav a:hover{background:#17191d;color:var(--white);border-left-color:#3d424a}
+.nav a.active{background:linear-gradient(90deg,rgba(230,57,70,.14),transparent);color:#fff;border-left-color:var(--red)}
+.nav a i{font-style:normal;font-size:11px;color:var(--red);font-weight:800;min-width:14px;padding-top:2px}
+.side-foot{padding:24px 22px 0;margin-top:20px;border-top:1px solid var(--line);font-size:11px;color:#4e525a;line-height:1.9}
+
+.hero{padding:30px 0 4px;border-bottom:1px solid var(--line)}
+.hero em{display:block;font-style:normal;font-size:11.5px;letter-spacing:4px;color:var(--red);font-weight:700;margin-bottom:16px}
+.hero h1{margin:0 0 16px;font-size:31px;line-height:1.32;color:var(--white);font-weight:800;letter-spacing:-.3px}
+.hero p{margin:0 0 20px;color:#9ba1aa;font-size:14px;max-width:620px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding-bottom:24px}
+.chips span{font-size:11.5px;color:var(--dim);border:1px solid var(--line);border-radius:99px;padding:4px 11px;background:#131519}
+.chips span.hot{color:var(--amber);border-color:rgba(252,163,17,.35);background:rgba(252,163,17,.07)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:14px;margin-top:30px}
+.pcard{display:block;background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:19px;transition:.2s}
+.pcard:hover{border-color:rgba(230,57,70,.55);background:var(--panel2);transform:translateY(-3px)}
+.pcard .pnum{font-size:10.5px;font-weight:800;color:var(--red);letter-spacing:2px}
+.pcard h3{margin:7px 0 8px;color:var(--white);font-size:15.5px;line-height:1.45}
+.pcard p{margin:0 0 14px;font-size:12.5px;color:#8f959e;line-height:1.7}
+.pcard .pmeta{display:block;font-size:11px;color:#5f646c;border-top:1px solid var(--line);padding-top:10px}
+
+.idx-h{margin:38px 0 0;font-size:14px;color:var(--white);letter-spacing:1px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.idx{display:grid;gap:12px;margin-top:16px}
+.idx-g{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:13px 16px}
+.idx-g b{display:block;color:var(--white);font-size:13px;margin-bottom:9px}
+.idx-g a{display:inline-block;font-size:12.5px;color:#9aa0a9;border:1px solid var(--line);border-radius:5px;padding:3px 9px;margin:0 6px 6px 0}
+.idx-g a:hover{color:#fff;border-color:var(--red);background:rgba(230,57,70,.1)}
+
+.crumb{font-size:12px;color:#5f646c;margin-bottom:20px}
+.crumb a:hover{color:var(--red)}
+.crumb span{margin:0 7px;color:#3a3e45}
+.doc h1{margin:0 0 10px;color:var(--white);font-size:26px;font-weight:800;letter-spacing:-.2px}
+.doc h1 em{display:block;font-style:normal;font-size:11px;letter-spacing:4px;color:var(--red);font-weight:800;margin-bottom:12px}
+.lede{margin:0 0 20px;padding-bottom:20px;border-bottom:1px solid var(--line);color:#8f959e;font-size:13px;letter-spacing:.3px}
+
+.block{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 22px;margin:16px 0;scroll-margin-top:24px;transition:box-shadow .3s,border-color .3s}
+.block h3{margin:0 0 12px;padding-left:11px;color:var(--white);font-size:14.5px;font-weight:700;border-left:3px solid var(--red);letter-spacing:.3px}
+.block.hit{border-color:var(--amber);box-shadow:0 0 0 2px rgba(252,163,17,.25)}
+
+.list{margin:0;padding:0;list-style:none}
+.list li{position:relative;padding:7px 0 7px 16px;border-bottom:1px dashed rgba(255,255,255,.045)}
+.list li:last-child{border-bottom:0}
+.list li::before{content:"";position:absolute;left:0;top:1.15em;width:5px;height:5px;border-radius:50%;background:#555b64}
+.list li strong{color:var(--white);font-weight:700}
+
+.pyramid{display:flex;height:26px;border-radius:5px;overflow:hidden;background:#0b0c0e;margin-bottom:16px}
+.pyramid div{min-width:7px}
+.pyramid div:hover{filter:brightness(1.35)}
+.legend{list-style:none;margin:0;padding:0}
+.legend li{display:grid;grid-template-columns:11px 1fr auto;gap:10px;align-items:baseline;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.045)}
+.legend li:last-child{border:0}
+.dot{width:9px;height:9px;border-radius:2px;display:block;margin-top:.55em}
+.legend b{color:var(--white);font-weight:700;font-size:14px}
+.legend small{display:block;color:#8d939c;font-size:13px;line-height:1.68}
+.legend .num{color:var(--amber);font-size:12.5px;white-space:nowrap;font-variant-numeric:tabular-nums}
+
+.tiers{list-style:none;margin:0;padding内边距:0;display:grid;gap:8px}
+.tiers li{display:grid;grid-template-columns:54px 1fr;gap:14px;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:12px 15px}.层 次{显示:网格;网格模板列:54像素 1fr;间距:14像素;背景:变量(--面板2);边框:1像素 实线 变量(--线条);边框半径:8像素;内边距:12像素 15像素}
+.lv{align-self:start;font-size:11.5px;font-weight:800;text-align:center;color:#111;background:hsl(var(--h) 74% 56%);border-radius:5px;padding:4px 0}.lv{align-self:start;font-size:11.5px;font-weight:800;text-align:center;color:#111;背景:hsl(var(--h) 74% 56%);边框半径:5px;内边距:4px 0}
+.tiers b{display:block;color:var(--white);font-size:14px;margin-bottom:2px}.层级 b{显示:块级元素;颜色:变量(--白色);字体大小:14像素;下边距:2像素}
+.tiers p{margin:0;font-size:13.5px;color:#969ca5}.层级 p{外边距:0;字体大小:13.5px;颜色:#969ca5}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(212px,1fr));gap:10px}.网格{显示:网格;网格模板列:重复(自动适配,最小最大(212像素,1fr));间隙:10像素}
+.card{background:var(--panel2);border:1px solid var(--line);border-left:3px solid var(--red);border-radius:8px;padding:13px 15px}.卡片{背景:变量(--面板2);边框:1像素 实线 变量(—线);左边界:3像素 实线 变量(—红色);圆角:8像素;内边距:13像素 15像素}
+.card h4{margin:0 0 5px;color:var(--white);font-size:13px;letter-spacing:.4px}.卡片 h4{外边距:0 0 5px;颜色:变量(--白色);字体大小:13px;字距:.4px}
+.card h4 span{color:var(--red);font-size:11px;font-weight:800;margin-left:6px}.卡片 h4 span{颜色:变量(--红色);字体大小:11像素;字体粗细:800;左边距:6像素}
+.card p{margin:0;font-size:12.8px;color:#969ca5;line-height:1.72}.卡片 p{外边距:0;字体大小:12.8px;颜色:#969ca5;行高:1.72}
+.card p b{color:#dfe3e8;font-weight:700}.卡片 p b{颜色:#dfe3e8;字体粗细:700}
+
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:44px;padding-top:24px;border-top:1px solid var(--line)}.分页器{显示方式:网格;网格模板列:1fr 1fr;间距:12px;上边距:44px;顶部内边距:24px;上边框:1px 实线 变量(--line)}
+.pager .pg{display:block;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:12px 16px;transition:.2s}.分页器 .pg{显示:块;背景:变量(—面板);边框:1像素 实线 变量(—线条);圆角:9像素;内边距:12像素 16像素;过渡:.2秒}
+.pager .pg:hover{border-color:var(--red);background:var(--panel2)}.分页器 .pg:悬停{边框颜色:变量(--红色);背景:变量(—面板2)}
+.pager .pg i{display:block;font-style:normal;font-size:11px;color:var(--dim);letter-spacing:1px;margin-bottom:4px}.分页器 .pg i{显示:块;字体样式:正常;字体大小:11像素;颜色:变量(--dim);字距:1像素;下边距:4像素}
+.pager .pg b{color:var(--white);font-size:13.5px;font-weight:700}.分页器 .pg b{颜色:变量(--白色);字体大小:13.5px;字体粗细:700}
+.pager .next{text-align:right}.分页器 .下一页{文本对齐:右对齐}
+
+footer{margin-top:60px;padding-top:24px;border-top:1px solid var(--line);color:#555a62;font-size:12px;text-align:center;line-height:2}页脚{上边距:60px;顶部内边距:24px;顶部边框:1px 实线 var(--line);颜色:#555a62;字体大小:12px;文本对齐:居中;行高:2}
+footer页脚 b{color颜色:#7d838c;letter-spacing:2px}页脚 b{颜色:#7d838c;字距:2像素}
+#top{position:fixed;right:20px;bottom:20px;width:40px;height:40px;border-radius:10px;background:#1c1f24;border:1px solid var(--line);color:var(--text);font-size:16px;cursor:pointer;opacity:0;pointer-events:none;transition:.2s;z-index:90}#top{position:fixed;right:20px;bottom:20px;width:40px;height:40px;border-radius:10px;background:#1c1f24;border:1px solid var(--line);颜色:var(--text);字体大小:16px;光标:指针;透明度:0;指针事件:无;过渡:.2秒;z-index:90}
+#top.show{opacity:1;pointer-events:auto}
+#top:hover{border-color:var(--red);color:#fff}
+
+.topbar{display:none}
+.overlay{display:none}
+@media (max-width:900px){
+  .layout{display:block}
+  .topbar{display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:60;padding:12px 16px;background:rgba(14,15,17,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}  .顶部栏{显示:弹性布局;对齐方式:居中;间距:12像素;定位:固定;顶部:0;层叠顺序:60;内边距:12像素 16像素;背景:rgba(14,15,17,.94);背景滤镜:模糊(10像素);下边框:1像素 实线 变量(--line)}  .顶部栏{显示:弹性布局;对齐方式:居中;间距:12像素;定位:固定;顶部:0;层叠顺序:60;内边距:12像素 16像素;背景:rgba(14,15,17,.94);背景滤镜:模糊(10像素);下边框:1像素 实线 变量(--line)}  .顶部栏{显示:弹性布局;对齐方式:居中;间距:12像素;定位:固定;顶部:0;层叠顺序:60;内边距:12像素 16像素;背景:rgba(14,15,17,.94);背景滤镜:模糊(10像素);下边框:1像素 实线 变量(--line)}
+  .topbar顶部栏 button按钮{width宽度:36px;height高度:34px;background背景:none;border:1px solid var(--line);border-radius:7px;color:var(--text);font-size字体大小:15px}  .顶部栏 按钮{宽度:36像素;高度:34像素;背景:无;边框:1像素 实线 变量(--line);圆角:7像素;颜色:变量(--text);字体大小:15像素}  .顶部栏 按钮{宽度:36像素;高度:34像素;背景:无;边框:1像素 实线 变量(--线条);圆角:7像素;颜色:变量(--文本);字体大小:15像素}  .顶部栏 按钮{宽度:36像素;高度:34像素;背景:无;边框:1像素 实线 变量(--线条);圆角:7像素;颜色:变量(--文本);字体大小:15像素}
+  .topbar b{color:var(--white);font-size:13.5px}  .topbar b{color颜色:var(--white);font-size:13.5px}  .topbar b{color:var(--white);font-size:13.5px}  .topbar b{颜色:var(--white);font-size:13.5px}  .顶部栏 b{颜色:变量(--白色);字体大小:13.5像素}  .顶部栏 b{颜色颜色:变量(--白色);字体大小:13.5像素}  .顶部栏 b{颜色:变量(--白色);字体大小:13.5像素}  .顶部栏 b{颜色:变量(--白色);字体大小:13.5像素}
+  .sidebar{position:fixed;left:0;top:0;transform:translateX(-102%);transition:transform .25s ease;box-shadow:14px 0 40px rgba(0,0,0,.6)}  .sidebar{position:fixed;左:0;上:0;变换:平移X(-102%);过渡:变换 .25秒 缓动;阴影:14像素 0 40像素 rgba(0,0,0,.6)}  .侧边栏{位置:固定;左:0;顶部:0;变换:平移X(-102%);过渡:变换 .25秒 缓和;盒阴影:14像素 0 40像素 rgba(0,0,0,.6)}  .侧边栏{位置:固定;左:0;上:0;变换:平移X(-102%);过渡:变换 .25秒 缓动;阴影:14像素 0 40像素 rgba(0,0,0,.6)}
+  .sidebar.open{transform:none}  .侧边栏.打开{变换:无}
+  .overlay{display:block;position:fixed;inset:0;z-index:70;background:rgba(0,0,0,.6);opacity:0;pointer-events:none;transition:.25s}  .叠加层{显示:块级;位置:固定;内嵌:0;层叠顺序:70;背景:rgba(0,0,0,.6);透明度:0;指针事件:无;过渡:.25秒}  .叠加{显示:块级;定位:固定;内边距:0;层叠顺序:70;背景:rgba(0,0,0,.6);透明度:0;指针事件:无;过渡:.25s}  .叠加层{显示:块级;位置:固定;内嵌:0;层叠顺序:70;背景:rgba(0,0,0,.6);透明度:0;指针事件:无;过渡:.25秒}
+  .overlay.show{opacity:1;pointer-events:auto}  .叠加层.显示{透明度:1;指针事件:自动}.叠加层显示透明度指针事件自动
+  .content内容{padding内边距:24px 18px 110px}  .内容{内边距:24像素 18像素 110像素}  .内容{内边距:24px 18px 110px}  .内容{内边距:24像素 18像素 110像素}
+  .hero英雄 h1{font-size字体大小:23px}
+  .doc h1{font-size:21px}
+  .block{padding:15px 16px}  .块{内边距:15像素 16像素}  .块{内边距:15px 16px}  .块{内边距:15像素 16像素}  .块{内边距:15px 16px}  .块{内边距:15像素 16像素}  .块{内边距:15px 16px}  .块{内边距:15像素 16像素}
+  .tiers li{grid-template-columns:46px 1fr;gap:10px;padding:11px 12px}  .层 次{网格模板列:46像素 1fr;间距:10像素;内边距:11像素 12像素}.层次网格模板列像素间距内边距
+  .pager{grid-template-columns:1fr}  .分页器{网格模板列:1fr}  .分页器{网格模板列:1fr}  .分页器{网格模板列:1fr}
+  .pager .next{text-align:left}  .分页器 .下一页{文本对齐:左对齐}  .分页器 .下一页{文本对齐:左对齐}  .分页器 .下一页{文本对齐:左对齐}
+}
+@media print{
+  .sidebar,.topbar,#top,#results{display:none!important}  .侧边栏,.顶部栏,#顶部,#结果{显示:无！重要}  .侧边栏,.顶部栏,#顶部,#结果{显示:无！重要}  .侧边栏,.顶部栏,#顶部,#结果{显示:无！重要}
+  body{background:#fff;color颜色:#111}主体{背景：#fff;颜色:#111}主体{背景:#fff;颜色:#111}主体{背景：#fff;颜色:#111}
+  .block,.tiers li,.card,.pcard,.idx-g{background:#fff;border-color:#ccc}  .块,.层级 li,.卡片,.pcard,.idx-g{背景:#fff;边框颜色:#ccc}.块,.层级卡片背景边框颜色
+  h1,h3,.tiers等级 b,.h1,h3,.层级 b,.h1,h3,.等级 b,.h1,h3,.层级 b,.
